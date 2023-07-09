@@ -11,7 +11,8 @@ const userSchema = new Schema({
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     username: {
         type: String,
@@ -25,20 +26,21 @@ const userSchema = new Schema({
         type: Number,
         required: true
     },
-    createdAt: {
+    role: {
         type: String,
         required: true,
-        default: Date.now
+        enum: ['complainant', 'admin', 'staff'],
+        default: 'complainant'
     },
-    verified: {
-        type: Boolean,
-        required: true,
-        default: false
+    affiliate: {
+        type: String,
+        enum: ["Ghana Police Service", "Ghana Fire Service", "Ghana Ambulance Service", "Electricity Company of Ghana (ECG)", "Local Assembly"],
     },
-    complaints: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Complaints'
-    }]
+    rank: {
+        type: String,
+        enum: ['Staff', 'Manager', 'Senior Inpector'],
+    }
+
 },
     { timestamps: true }
 )
