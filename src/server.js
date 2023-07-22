@@ -18,6 +18,7 @@ mongoose.connect(DB_URL)
     .then(() => console.log('connected to db'))
     .catch((e) => console.error(e))
 
+app.get('/', (req, res) => res.json({message: 'Welcome to GEMS api!'}))
 
 //if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
 //    app.use(express.static(path.join(__dirname, '../build')))

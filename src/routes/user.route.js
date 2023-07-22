@@ -1,4 +1,4 @@
-const { newUser, findUsers, removeUser, updateUser, findStaffs, findComplainants } = require('../api/user/controllers');
+const { newUser, findUsers, removeUser, updateUser, findStaffs, findComplainants, numberOfUsers } = require('../api/user/controllers');
 const { adminAccess, adminStaffAccess } = require('../middleware');
 
 module.exports = (router) => {
@@ -9,5 +9,7 @@ module.exports = (router) => {
     router.delete('/user', removeUser);
     
     router.get('/users/staffs', adminAccess,findStaffs);
-    router.get('/users/complainants', adminStaffAccess,findComplainants);
+    router.get('/users/complainants', adminStaffAccess, findComplainants);
+
+    router.get('/users/count/:role', adminStaffAccess, numberOfUsers);
 }

@@ -4,6 +4,7 @@ const findStaffs = require('./find-staffs')
 const findComplainants = require('./find-complainants')
 const removeUser = require('./remove-user')
 const updateUser = require('./update-user')
+const numberOfUsers = require('./number-of-users')
 
 module.exports = {
     newUser,
@@ -11,5 +12,6 @@ module.exports = {
     removeUser,
     updateUser,
     findStaffs,
-    findComplainants
+    findComplainants,
+    numberOfUsers
 }
