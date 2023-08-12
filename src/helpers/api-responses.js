@@ -2,7 +2,7 @@ class ResponsePool {
     //constructor();
 
     SuccessResponseWithData(res, message, data) {
-        return res.status(200).json({ message: message || "Successfully created", data })
+        return res.status(200).json(data)
     }
     
     SuccessResponse(res, message) {

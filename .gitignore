@@ -12,6 +12,8 @@ pnpm-lock.yaml
 /.next/
 /out/
 
+.idea
+
 .env
 
 # production

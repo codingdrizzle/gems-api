@@ -5,8 +5,8 @@ module.exports = (router) => {
     router.post('/user/new', newUser);
     router.get('/user/:id', adminAccess, findUsers);
     router.get('/users', adminAccess, findUsers);
-    router.put('/user', updateUser);
-    router.delete('/user', removeUser);
+    router.patch('/user/:id', updateUser);
+    router.delete('/user/:id', removeUser);
     
     router.get('/users/staffs', adminAccess,findStaffs);
     router.get('/users/complainants', adminStaffAccess, findComplainants);

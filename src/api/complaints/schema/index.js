@@ -1,4 +1,4 @@
-const { Schema, models, model } =  require('mongoose')
+const {Schema, models, model} = require('mongoose')
 
 
 const complaintSchema = Schema({
@@ -32,17 +32,15 @@ const complaintSchema = Schema({
         required: true
     },
     attendant: {
-        type: Schema.Types.ObjectId, 
-        required: true,
-        ref: 'Users' 
+        type: Schema.Types.ObjectId,
+        ref: 'Users'
     },
-    complainant: { 
-        type: Schema.Types.ObjectId, 
+    complainant: {
+        type: Schema.Types.ObjectId,
         required: true,
-        ref: 'Users' 
+        ref: 'Users'
     }
-
-})
+}, {timestamps: true})
 
 const Complaint = model('Complaint', complaintSchema)
 
