@@ -6,7 +6,8 @@ module.exports = async (req, res) => {
         if(req.params?.id){
             const complaint = await findComplaint({ _id: req.params?.id });
             return ApiResponse.SuccessResponseWithData(res, 'Successful', complaint);
-        }else{
+        }
+        else{
             const complaints = await findComplaints();
             return ApiResponse.SuccessResponseWithData(res, 'Successful', complaints);
         }

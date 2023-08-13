@@ -39,8 +39,8 @@ const userSchema = new Schema({
         },
         rank: {
             type: String,
-            enum: ['Staff', 'Manager', 'Senior Inspector'],
-            default: 'Staff'
+            // enum: ['Staff', 'Manager', 'Senior Inspector'],
+            // default: 'Staff'
         },
         isFirstTime: {
             type: Boolean,

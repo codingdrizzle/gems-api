@@ -13,7 +13,6 @@ const login = async (req, res, next) => {
         if (!password) return ApiResponses.errorResponse(res, 'Cannot process request due to undefined password', 'No password provided');
 
         const isPasswordMatch = await bcrypt.compare(password, user.password);
-        console.log(isPasswordMatch)
         if (isPasswordMatch && user) return res.status(200).json({message: 'Login Successful', token:generateToken({user})});
         else return ApiResponses.errorResponse(res, 'Login not successful', 'Email or password incorrect');
 

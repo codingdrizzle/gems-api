@@ -33,12 +33,12 @@ const complaintSchema = Schema({
     },
     attendant: {
         type: Schema.Types.ObjectId,
-        ref: 'Users'
+        ref: 'User'
     },
     complainant: {
         type: Schema.Types.ObjectId,
-        required: true,
-        ref: 'Users'
+        ref: 'User',
+        required: true
     }
 }, {timestamps: true})
 
