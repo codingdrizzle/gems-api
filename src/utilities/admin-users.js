@@ -4,7 +4,7 @@ const adminUsers = [
         lastname: 'Police',
         email: 'ghanapolice@gems.gh',
         username: 'Ghana Police',
-        password: 'adminpassword1',
+        password: 'ghanapolice2*23',
         contact: 191,
         role: 'admin',
         affiliate: 'Ghana Police Service',
