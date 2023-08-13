@@ -7,7 +7,6 @@ module.exports = async (req, res) => {
         return ApiResponse.SuccessResponseWithData(res, 'Complaint created successfully', complaint)
     } catch (error) {
         if (error.code === 11000) return ApiResponse.ErrorResponse(res, 409, 'Complaint already exists')
-        console.log(error)
         return ApiResponse.ErrorResponse(res, error.code, error.message)
     }
 }

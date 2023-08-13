@@ -9,13 +9,17 @@ const PORT = process.env.PORT || 8080
 const DB_URL = process.env.MONGODB_URL
 
 const router = require('./routes')
+const seedAdminUsers = require('./utilities/seeder')
 
 app.use(cors())
 app.use(express.json())
 app.use('/api/v1/', router)
 
 mongoose.connect(DB_URL)
-    .then(() => console.log('connected to db'))
+    .then(async () => {
+        await seedAdminUsers()
+        console.log('connected to db')
+    })
     .catch((e) => console.error(e))
 
 app.get('/', (req, res) => res.json({message: 'Welcome to GEMS api!'}))
