@@ -1,4 +1,4 @@
-export const adminUsers = [
+const adminUsers = [
     {
         firstname: 'Ghana',
         lastname: 'Police',
@@ -8,7 +8,6 @@ export const adminUsers = [
         contact: 191,
         role: 'admin',
         affiliate: 'Ghana Police Service',
-        rank: ''
     },
     {
         firstname: 'Ghana',
@@ -19,7 +18,6 @@ export const adminUsers = [
         contact: 192,
         role: 'admin',
         affiliate: 'Ghana Fire Service',
-        rank: ''
     },
     {
         firstname: 'Ghana',
@@ -27,10 +25,9 @@ export const adminUsers = [
         email: 'ghanaambulance@gems.gh',
         username: 'Ghana Ambulance',
         password: 'ghanaambulance2*23',
-        contact: 192,
+        contact: 193,
         role: 'admin',
         affiliate: 'Ghana Ambulance Service',
-        rank: ''
     },
     {
         firstname: 'Ghana',
@@ -41,7 +38,6 @@ export const adminUsers = [
         contact: 302611611,
         role: 'admin',
         affiliate: 'Electricity Company of Ghana',
-        rank: ''
     },
     {
         firstname: 'Local',
@@ -52,7 +48,8 @@ export const adminUsers = [
         contact: 100,
         role: 'admin',
         affiliate: 'Local Assembly',
-        rank: ''
-    },
 
+    },
 ];
+
+module.exports = adminUsers

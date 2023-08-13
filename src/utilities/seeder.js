@@ -1,5 +1,5 @@
 const User = require('../api/user/schema'); 
-const {adminUsers} = require('./admin-users')
+const adminUsers = require('./admin-users')
 
 const seedAdminUsers = async () => {
     try {
